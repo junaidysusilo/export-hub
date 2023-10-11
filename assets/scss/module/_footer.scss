@@ -1,0 +1,138 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer-top {
+    padding-top: 100px;
+    padding-bottom: 71px;
+    border-top: 1px solid #eaeaea;
+
+    .footer__widget-title {
+        font-size: 15px;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 26px;
+    }
+}
+
+.footer__widget-nav li a,
+.footer__copyright-links li a {
+    display: block;
+    position: relative;
+    color: $color-body;
+    font-size: 14px;
+    line-height: 33px;
+
+    &:hover {
+        color: $color-theme;
+    }
+}
+
+.footer__copyright-links li a {
+    margin-right: 14px;
+    padding-right: 15px;
+    margin-bottom: 3px;
+
+    &:after {
+        content: '|';
+        position: absolute;
+        right: 0;
+        color: $color-body;
+    }
+}
+
+.footer__copyright-links li:last-child a:after {
+    display: none;
+}
+
+.footer-bottom {
+    padding: 35px 0;
+    border-top: 1px solid #eaeaea;
+
+    .social__icons a {
+        font-size: 17px;
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 4px;
+    color: $color-white;
+    background-color: $color-dark;
+    overflow: hidden;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-theme;
+    }
+}
+
+#scrollTopBtn.actived {
+    right: 30px;
+    opacity: 1;
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .footer-top {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .footer-top {
+        padding-top: 50px;
+        padding-bottom: 0;
+    }
+
+    .footer__widget {
+        margin-bottom: 30px;
+    }
+
+    .footer-top .footer__widget-title {
+        margin-bottom: 20px;
+    }
+
+    .footer-bottom .social__icons {
+        margin-top: 20px;
+        justify-content: flex-start !important;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    .footer-bottom {
+        padding: 25px 0;
+    }
+
+    .footer__copyright-links {
+        margin-bottom: 10px;
+
+        li a {
+            font-size: 13px;
+            line-height: 20px;
+            margin-right: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #scrollTopBtn.actived {
+        right: 20px;
+    }
+}

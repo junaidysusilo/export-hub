@@ -1,0 +1,79 @@
+/*-------------------------
+    page title 
+-------------------------*/
+
+.header-transparent+.page-title {
+    margin-top: -135px;
+}
+
+.pagetitle__subheading {
+    font-family: $font-body;
+    font-size: 17px;
+    line-height: 1;
+    color: $color-gray;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.pagetitle__heading {
+    font-size: 75px;
+    color: $color-white;
+    margin-bottom: 0;
+}
+
+.pagetitle__desc {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $color-white;
+    margin-bottom: 0;
+}
+
+.page-title {
+    padding: 410px 0 86px;
+
+    .breadcrumb {
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item::before {
+        color: $color-white;
+    }
+
+    .breadcrumb-item a:hover {
+        color: $color-theme;
+    }
+
+    .breadcrumb-item.active {
+        color: #f4f4f4;
+    }
+}
+
+/* Medium Size Devices */
+@include md-screens {
+    .page-title {
+        padding: 200px 0 60px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .page-title {
+        padding: 100px 0 50px;
+    }
+
+    .pagetitle__desc {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+
+    .pagetitle__heading {
+        font-size: 32px;
+    }
+
+    .page-title .breadcrumb {
+        margin-top: 20px;
+    }
+}

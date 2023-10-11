@@ -1,0 +1,13 @@
+/*-------------------
+    lists
+-------------------*/
+.contact__list li {
+    font-size: 13px;
+    line-height: 21px;
+
+    i {
+        font-size: 16px;
+        margin-right: 9px;
+        color: $color-theme;
+    }
+}

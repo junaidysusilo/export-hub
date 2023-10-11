@@ -1,0 +1,47 @@
+/*-----------------------
+    banner
+------------------------*/
+.banner-1 {
+    .inner-padding {
+        padding: 104px 65px 115px;
+    }
+
+    .fancybox-item {
+        margin-bottom: 50px;
+
+
+        .fancybox__icon i,
+        .fancybox__title,
+        .fancybox__desc,
+        &:hover .fancybox__title {
+            color: $color-white
+        }
+    }
+}
+
+@media only screen and (min-width:1400px) {
+    .banner-1 .inner-padding {
+        padding: 115px 120px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .banner-1 {
+
+        .fancybox-item {
+            margin-bottom: 30px;
+        }
+
+        .video__btn {
+            height: 300px !important;
+        }
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    .banner-1 .video__btn {
+        height: 200px !important;
+    }
+}

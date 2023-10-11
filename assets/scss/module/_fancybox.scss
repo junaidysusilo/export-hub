@@ -1,0 +1,119 @@
+/*-----------------------
+     fancybox 
+------------------------*/
+
+.fancybox-item {
+  position: relative;
+  margin-bottom: 40px;
+
+  .fancybox__icon {
+    font-size: 70px;
+    line-height: 1;
+    color: $color-theme;
+    margin-bottom: 20px;
+    @include prefix(transition, transform 0.3s ease, webkit moz ms o);
+  }
+
+  .fancybox__title {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 17px;
+    @include prefix(transition, all 0.3s ease, webkit moz ms o);
+  }
+
+  .fancybox__desc {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+
+  &:hover .fancybox__icon {
+    @include prefix(transform, translateY(-4px), webkit moz ms o);
+  }
+
+  &:hover .fancybox__title {
+    color: $color-theme;
+  }
+}
+
+.fancybox-layout2 .fancybox-item .fancybox__title {
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 12px;
+}
+
+.fancybox-layout2 .fancybox-item .fancybox__icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.fancybox-layout2-panel {
+  background-color: $color-gray;
+  padding: 40px 20px 0;
+  margin-bottom: 50px;
+}
+
+.fancybox-layout2 .fancybox-item-custom {
+  background-color: $color-theme;
+  padding: 40px 40px 0;
+  margin-top: 12px;
+
+  .fancybox__icon {
+    font-size: 53px;
+    color: $color-white;
+    margin-bottom: 5px;
+  }
+
+  .fancybox__title {
+    font-size: 25px;
+    line-height: 29px;
+    font-weight: 400;
+    color: $color-white;
+    margin-bottom: 0;
+    transform: translateY(6px);
+  }
+}
+
+.fancybox-layout3 .heading__title {
+  line-height: 46px;
+}
+
+/* Medium Size Screens */
+@include md-screens {
+  .fancybox-item {
+    .fancybox__icon {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .fancybox__title {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+  .fancybox-item {
+    margin-bottom: 30px;
+  }
+
+  .fancybox-item .fancybox__icon {
+    font-size: 50px;
+    margin-bottom: 5px;
+  }
+
+  .fancybox-item .fancybox__title {
+    font-size: 18px;
+    margin-bottom: 5px !important;
+  }
+
+  .fancybox-layout2 .fancybox-item .fancybox__icon {
+    margin-bottom: 7px;
+  }
+
+  .fancybox-layout3 .heading__title {
+    line-height: 35px;
+  }
+}
